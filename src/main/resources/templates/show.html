@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="base :: nav"></div>
+First Name :<span th:text="${course.firstName}"></span><br/>
+Last Name :<span th:text="${course.lastName}"></span><br/>
+Email :<span th:text="${course.email}"></span><br/>
+phone :<span th:text="${course.phone}"></span><br/>
+Department :<span th:text="${course.name.department}"></span><br/>
+<a th:href="@{/delete/{id}(id=${course.id})}">Delete This Course</a>
+</body>
+</html>
